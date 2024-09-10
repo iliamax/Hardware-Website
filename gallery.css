@@ -1,0 +1,158 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --red:#ff7200;
+    --light-red:#f9edeb;
+    
+}
+
+body {
+  background: #f1f1f1 !important;
+}
+
+
+
+header{
+    position:fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    background: #0c0c35;
+    padding:1rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header a img{
+    width: 180px;
+    border-radius: 10px;
+    height: 50px;
+}
+
+
+header .navbar a{
+    color:var(--red);
+    font-size:15px;
+    padding:1.1rem  1.5rem;
+}
+
+header .navbar h2{
+    color:#fff;
+    box-shadow: 2px 5px 5px #ff7200 inset ;
+    border-bottom: none;
+    border-radius: 3px;
+}
+header .navbar a h2{
+    text-decoration: none;
+    font-size: 15px;
+}
+@media (max-width:768px){
+    header .navbar h2{
+   margin-left: 10px;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .row mt-5 .col-12{
+        margin-top: 60%;
+    }
+}
+
+
+
+
+
+body .container {
+  max-width: 1600px;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    box-shadow: 20px 15px 15px 23px #0c0c35 inset;
+}
+
+
+#filter-buttons button {
+  border-radius: 3px;
+  background: #fff;
+  border-color: transparent;
+}
+
+#filter-buttons button:hover {
+  background: #0c0c35;
+    color: #ff7200;
+}
+
+#filter-buttons button.active {
+  color: #ff7200;
+  background:#0c0c35;
+}
+
+#filterable-cards .card {
+  width: 20rem;
+  border: 2px solid #ff7200;
+  background:#0c0c35;
+
+}
+
+#filterable-cards .card.hide {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #filterable-cards {
+    justify-content: center;
+  }
+
+  #filterable-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+.container .card-title{
+    color: #ff7200;
+}
+.container a{
+    text-decoration: none;
+}
+.container a .card-text{
+    background: #fff;
+    color: #0c0c35;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center
+}
+.container a .card-text:hover{
+    background:  #ff7200;
+    color: #0c0c35;
+}
+.cards{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-left: 40px;
+}
+@media(max-width:768px){
+    .cards{
+        overflow: hidden;
+        margin-left: 0;
+        display: block;
+    }
+    #filterable-cards .card{
+        width: 20rem;
+    } 
+}
+@media(max-width:567-1030px){
+    #filterable-cards .card{
+        width: 25rem;
+      
+    } 
+    .cards{
+        overflow: hidden;
+        margin-left: 70px;
+        flex-wrap: wrap;
+    }
+}
